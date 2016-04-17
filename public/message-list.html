@@ -1,0 +1,10 @@
+<table class="table table-striped table-hover">
+    <tbody>
+    <tr ng-repeat="message in $ctrl.messages">
+      
+      <td ng-click="$ctrl.showMessage(message.id)">{{message.subject}}</td>
+      <td ng-click="$ctrl.showUserCard(message.from)">{{message.from}}</td>
+      <td ng-click="$ctrl.removeFromInbox($ctrl.mailbox,message,$index)">Remove</td>
+    </tr>
+    </tbody>
+  </table>

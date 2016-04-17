@@ -1,0 +1,3 @@
+<div class="btn-group-vertical" style="width:100%">
+<button  ng-repeat="box in $ctrl.mailStore" class="btn btn-primary" ng-class="{active: $ctrl.mailbox==box.mailboxName}" ng-click="$ctrl.chooseMailbox({mailbox: box.mailboxName})">{{box.mailboxName}}</button>
+</div>

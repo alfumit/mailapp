@@ -1,0 +1,47 @@
+<!--
+v0.0.6
+1.Роутер в app.js 
+2.Сделал абстрактный стейт
+3.Использовал multiple named views + седал substate, влияющий только на одну из этих вьюх
+4. Есть resolve()  - app.js строка 105
+5. $state.go() во всех видах
+
+Вопрос 1: делаю в шаблоне стейта input с ng-model, но почему-то не могу его
+значение получить в контроллере. Есть какая-то хитрость?
+
+Вопрос 2: state controller vs component controller 
+что лучше делать сложный контроллер для стейта и отдавать готовые объекты в компонент,
+или же в контроллере стейта производить минимум действий, и нагружать контроллер компонента?
+
+Вопрос 3: state resolve vs component controller 
+Когда для подгрузки данных в компонент использовать resolve() и когда
+контроллер компонента?
+
+
+-->
+<html ng-app="mailApp">
+
+  <head>
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <script data-require="angular.js@1.5.0" data-semver="1.5.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script data-require="ui-router@1.0.0alpha0" data-semver="1.0.0alpha0" src="//cdn.rawgit.com/angular-ui/ui-router/1.0.0alpha0/release/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.5.2/angular-messages.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>AnguMail Main Page</h1>
+    <hr />
+    <ui-view></ui-view>
+  <script>
+   let base = document.createElement("base"),head = document.getElementsByTagName("head")[0];
+   base.href = document.location.href;
+   head.appendChild(base);
+  </script>
+    <script src="app.js"></script>
+    <script src="components.js"></script>
+    <script src="services.js"></script>
+  </body>
+
+</html>

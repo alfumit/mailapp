@@ -1,0 +1,14 @@
+<div class="column-left">
+  <select style="width:100%; margin-bottom: 10px" ng-model="$ctrl.section"  ng-change="$ctrl.sectionChange($ctrl.section)" class="form-control">
+    <option value="inbox">Mail</option>
+    <option value="contacts">Contacts</option> 
+  </select>
+  <button style="width:100%; margin: 10px 0" class="btn btn-danger" ng-click="$ctrl.showUserCard()">Create New User</button>
+</div>
+
+<div class="column-right">
+<user-card-list show-user-form="$ctrl.showUserForm"></user-card-list>
+</div>
+<div class="popup-wrapper" ng-if="$ctrl.showSendForm || $ctrl.showUserForm || $ctrl.showMessageView" ng-click="$ctrl.showSendForm = false; $ctrl.showUserForm=false; $ctrl.showMessageView=false">
+  <user-card class="user-card" email="{{$ctrl.fromUser}}" close-user-card="$ctrl.showUserForm" ng-click="$event.stopPropagation()" ng-if="$ctrl.showUserForm"></user-card>
+</div>

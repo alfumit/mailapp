@@ -1,0 +1,21 @@
+<div class="column-left">
+  <select style="width:100%; margin-bottom: 10px" ng-model="$ctrl.section" class="form-control" ng-change="$ctrl.sectionChange($ctrl.section)">
+    <option value="mail" >Mail</option>
+    <option value="contacts">Contacts</option> 
+  </select>
+  
+    <mailbox-list class="mailbox-list" mailbox="$ctrl.mailboxChosen" choose-mailbox="$ctrl.chooseMailbox(mailbox)"></mailbox-list>
+    <button style="width:100%; margin: 10px 0" class="btn btn-danger" ng-click="$ctrl.showMessageForm()">Write New Message</button>
+
+</div>
+
+<div class="column-right">
+  <div ui-view="messageList"></div>
+</div>
+<div class="clearfix"></div>
+  <div ui-view="popup"></div>
+<!--div class="popup-wrapper" ng-if="$ctrl.showSendForm || $ctrl.showUserForm || $ctrl.showMessageView" ng-click="$ctrl.showSendForm = false; $ctrl.showUserForm=false; $ctrl.showMessageView=false">
+  <message-view message="$ctrl.message" show-message-view="$ctrl.showMessageView" ng-if="$ctrl.showMessageView" ng-click="$event.stopPropagation()"></message-view>
+  <write-message mailbox-name="{{$ctrl.mailboxChosen}}" mailbox-index="{{$ctrl.mailboxIndex}}" messages="$ctrl.messages" mail-store="$ctrl.mailStore" show-send-form="$ctrl.showSendForm" ng-if="$ctrl.showSendForm" ng-click="$event.stopPropagation()"></write-message>
+  <user-card class="user-card" email="{{$ctrl.fromUser}}" close-user-card="$ctrl.showUserForm" ng-click="$event.stopPropagation()" ng-if="$ctrl.showUserForm"></user-card>
+</div-->

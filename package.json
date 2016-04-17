@@ -1,0 +1,32 @@
+{
+  "name": "angumail",
+  "version": "0.0.1",
+  "description": "A project of a mail application created with Angular and based on MEAAN stack",
+  "main": "mail-server.js",
+  "dependencies": {
+    "angular": "^1.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node mail-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfumit/mailapp.git"
+  },
+  "keywords": [
+    "angular",
+    "nodejs\u001b[D\u001b[C\u001b[C\u001b[D",
+    "mail",
+    "contacts",
+    "moscow",
+    "city",
+    "services"
+  ],
+  "author": "Alexander Fedotov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alfumit/mailapp/issues"
+  },
+  "homepage": "https://github.com/alfumit/mailapp#readme"
+}

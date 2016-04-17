@@ -1,0 +1,29 @@
+<div  class="row">
+  <div class="col-md-12">
+    <div class="panel" ng-class="{'panel-info':!$ctrl.finished,'panel-success':$ctrl.finished}">
+      <div class="panel-heading">
+        <h3 class="panel-title"  contenteditable="{{$ctrl.setEditable}}" ng-class="{'bg-danger':$ctrl.setEditable}" ng-model="$ctrl.userForm.fullName"></h3>
+        <button class="close pull-right" ng-if="!$ctrl.itemImported" ng-click="$ctrl.hide()">&times;</button>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class=" col-md-9 col-lg-9 ">
+            <table class="table table-user-information">
+              <tbody>
+              <tr><td>Дата рождения:</td><td contenteditable="{{$ctrl.setEditable}}" ng-class="{'bg-danger':$ctrl.setEditable}"  ng-model="$ctrl.userForm.birthdate"></td></tr>
+              <tr><td>Пол:</td><td contenteditable="{{$ctrl.setEditable}}"  ng-class="{'bg-danger':$ctrl.setEditable}"  ng-model="$ctrl.userForm.gender"></td></tr>
+              <tr><td>Адрес:</td><td contenteditable="{{$ctrl.setEditable}}"  ng-class="{'bg-danger':$ctrl.setEditable}"  ng-model="$ctrl.userForm.address"></td></tr>
+              <tr><td>Email:</td><td contenteditable="{{$ctrl.setEditable}}"  ng-class="{'bg-danger':$ctrl.setEditable}"  ng-model="$ctrl.userForm.email"></td>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer text-right">
+          <button class="btn" ng-click="$ctrl.buttonAction()" ng-class="{'btn-success':$ctrl.setEditable, 'btn-primary':!$ctrl.setEditable,'disabled':$ctrl.finished}">{{$ctrl.editLabel}}</button>
+          <button class="btn" ng-if="!$ctrl.itemImported" ng-click="$ctrl.hide()">Close</button>
+          <button class="btn btn-danger" ng-if="$ctrl.itemImported" ng-click="$ctrl.delete()">Delete</button>          
+      </div>
+    </div>
+  </div>
+</div>

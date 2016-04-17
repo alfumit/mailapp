@@ -1,0 +1,4 @@
+<label for="filterName">Filter by name:</label> 
+<input id="#filterName" type="text" ng-model="$ctrl.filterName" class="form-control">
+<br>
+<user-card ng-repeat="row in $ctrl.data| filter:{fullName: $ctrl.filterName}" item="row" remove-card="$ctrl.removeCard(index)" contact-index="{{$index}}"></user-card>
